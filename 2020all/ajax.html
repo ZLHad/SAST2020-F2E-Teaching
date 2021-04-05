@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax操作</title>
+</head>
+<script src="E:\Web\Sources\jquery-3.2.1\jquery-3.2.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            setFunction();
+        })
+    });
+    function setFunction() {
+        $.ajax({
+            type: 'POST',
+            url: 'https://1672001053991306.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/hello_world_service/demo-text/',
+            data: '',
+            dataType: 'json',
+            error: function () {
+                alert("请求失败");
+            },
+            success: function (data) {
+                $('#box').append('<div>' + data.msg + '</div>');
+            }
+        })
+    }
+</script>
+
+<body>
+    <div id="box">
+        <p>点击按钮已查看数据。</p>
+        <button id="btn" type="button">
+            单击
+        </button>
+    </div>
+</body>
+
+</html>

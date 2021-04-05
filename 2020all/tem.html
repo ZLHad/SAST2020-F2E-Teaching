@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study</title>
+</head>
+
+<body>
+    <input type="text" name="age" />
+    <br>
+    <span id="msg"></span>
+</body>
+<script>
+    let span = document.querySelector("#msg");
+    let age = '';
+    document.querySelector('[name="age"]').addEventListener('keyup', function () {
+        age = this.value;
+        if (age > 18) {
+            msg = "Your are an adult."
+        }
+        else {
+            msg = "Your are a teenager."
+        }
+        span.innerHTML = msg;
+
+    });
+    switch (true) {
+        case age > 18:
+            console.log('你是一个成年人');
+            break;
+        default:
+            console.log("小屁孩滚一边去。")
+            break;
+    }
+
+
+</script>
+
+</html>

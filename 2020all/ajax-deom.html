@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJax-demo</title>
+</head>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            console.log(12);
+            setFunction();
+        })
+    });
+    function setFunction() {
+        $.ajax({
+            type: 'POST',
+            url: 'https://1672001053991306.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/hello_world_service/demo-text/',
+            data: '',
+            dataType: 'json',
+            error: function () {
+                alert('Error');
+            },
+            success: function (res) {
+                $('<div>' + res.msg + '</div>').appendTo('#text');
+            }
+
+        })
+    }
+</script>
+
+<body>
+    <div id="text">
+        <p>
+            请单击下面的按钮
+        </p>
+        <button id="btn" type="button">
+            点击
+        </button>
+    </div>
+</body>
+
+</html>

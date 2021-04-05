@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+
+</head>
+
+<body>
+    <div id="content" class="container">
+        这是前端组的最后一节课
+    </div>
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    // var divNode = document.getElementById("content");   // 通过id获取节点
+    // console.log(divNode.innerHTML);
+    // var insertNode = document.createElement("div");
+    // var ndoeValue = document.createTextNode("——我是张凌豪");
+    // insertNode.appendChild(ndoeValue);
+    // divNode.appendChild(insertNode);
+
+
+    $(document).ready(function () {
+        $("#content").append("<div>__zlh</div>");
+        $("<div>__zlh</div>").appendTo("#content");
+    })
+</script>
+
+</html>

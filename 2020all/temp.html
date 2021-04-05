@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        这是前端组最后一节课
+    </div>
+    <div>
+        <button type="button" id="btn">
+            提交
+        </button>
+    </div>
+</body>
+<script>
+    // var content = document.getElementById('content');
+    // // console.log(content.innerHTML);
+    // var contentAdd = document.createElement("div");
+    // var nodeValue = document.createTextNode("大家好");
+    // contentAdd.appendChild(nodeValue);
+    // content.appendChild(contentAdd);
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            setFunction();
+        })
+    });
+    fucntion setFunction(){ }
+    fucntion setFunction() {
+        $.ajax({
+            type: "POST",
+            url: 'https://1672001053991306.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/hello_world_service/Test/',
+            data: '',
+            dataType: 'json',
+            success: function (res) {
+                alert('res');
+            },
+            error: function () {
+                alert('error');
+            }
+
+        })
+
+    }
+</script>
+
+</html>

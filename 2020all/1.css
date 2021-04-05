@@ -1,0 +1,31 @@
+ul li {
+    list-style-type: none;
+}
+.fonts {
+    font-size: 20px;
+    font-family: 微软雅黑Light;
+    font-weight: bold;
+    /* 字体粗细 */
+    font-style: italic;
+    /* 斜体 */
+    text-decoration: line-through;
+    /* 删除线 */
+}
+
+/* .flex-container {
+    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item >{
+    align-self: center;
+} */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+}
